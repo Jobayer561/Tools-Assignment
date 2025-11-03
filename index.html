@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Budget Planner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="max-w-[580px] mx-auto p-5 border-2 border-gray-200 my-3 rounded-lg bg-white h-auto"
+  >
+    <h1 class="font-bold text-4xl mt-5 text-center text-gray-600">
+      Mini Budget Planner
+    </h1>
+    <input
+      type="text"
+      placeholder="Enter Amount"
+      class="input input-success w-full mt-8"
+    />
+    <select id="type" class="select select-success w-full mt-2">
+      <option class="font-semibold" value="income">Income</option>
+      <option class="font-semibold" value="expense">Expense</option>
+    </select>
+    <input
+      type="text"
+      placeholder="Category eg:food,fish"
+      class="input input-success w-full mt-2"
+    />
+    <button class="mt-5 btn btn-outline btn-success w-full">Add</button>
+    <br />
+    <button class="btn btn-outline btn-error w-full mt-2">Reset</button>
+
+    <div class="flex justify-center mt-5">
+      <div
+        class="w-full max-w-md text-center p-6 bg-gray-200 rounded-lg shadow-md"
+      >
+        <p>
+          <span class="font-semibold">Total Income: <strong>৳</strong></span
+          ><span id="income" class="font-semibold ml-1">0</span>
+        </p>
+        <p>
+          <span class="font-semibold">Total Expense: <strong>৳</strong></span
+          ><span id="expense" class="font-semibold ml-1">0</span>
+        </p>
+        <p>
+          <span class="font-semibold">Balance: <strong>৳</strong></span
+          ><span id="balance" class="font-semibold ml-1">0</span>
+        </p>
+      </div>
+    </div>
+
+    <h1 class="text-center font-bold my-4">Transaction History</h1>
+
+    <table id="transactions" class="w-full border-collapse mt-4">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="border border-gray-300 px-3 py-2 text-left">Type</th>
+          <th class="border border-gray-300 px-3 py-2 text-left">Amount</th>
+          <th class="border border-gray-300 px-3 py-2 text-left">Category</th>
+          <th class="border border-gray-300 px-3 py-2 text-left">
+            Date & Time
+          </th>
+          <th class="border border-gray-300 px-3 py-2 text-left">Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>
