@@ -17,39 +17,49 @@
     <h1 class="font-bold text-4xl mt-5 text-center text-gray-600">
       Mini Budget Planner
     </h1>
+
     <input
-      type="text"
-      placeholder="Enter Amount"
-      class="input input-success w-full mt-8"
+      id="income"
+      type="number"
+      placeholder="Enter Income"
+      class="input input-accent w-full mt-2"
     />
-    <select id="type" class="select select-success w-full mt-2">
-      <option class="font-semibold" value="income">Income</option>
-      <option class="font-semibold" value="expense">Expense</option>
-    </select>
+    <br />
     <input
+      id="expense"
+      type="number"
+      placeholder="Enter Expense"
+      class="input input-accent w-full mt-2"
+    />
+    <input
+      id="categoryText"
       type="text"
       placeholder="Category eg:food,fish"
-      class="input input-success w-full mt-2"
+      class="input input-accent w-full mt-2"
     />
-    <button class="mt-5 btn btn-outline btn-success w-full">Add</button>
+    <button id="addBtn" class="mt-5 btn btn-outline btn-success w-full">
+      Add
+    </button>
     <br />
-    <button class="btn btn-outline btn-error w-full mt-2">Reset</button>
+    <button id="resetBtn" class="btn btn-outline btn-error w-full mt-2">
+      Reset
+    </button>
 
     <div class="flex justify-center mt-5">
       <div
         class="w-full max-w-md text-center p-6 bg-gray-200 rounded-lg shadow-md"
       >
         <p>
-          <span class="font-semibold">Total Income: <strong>৳</strong></span
-          ><span id="income" class="font-semibold ml-1">0</span>
+          <span class="font-semibold">Income: <strong>৳</strong></span
+          ><span id="incomeValue" class="font-semibold ml-1">0</span>
         </p>
         <p>
-          <span class="font-semibold">Total Expense: <strong>৳</strong></span
-          ><span id="expense" class="font-semibold ml-1">0</span>
+          <span class="font-semibold">Expense: <strong>৳</strong></span
+          ><span id="expenseValue" class="font-semibold ml-1">0</span>
         </p>
         <p>
           <span class="font-semibold">Balance: <strong>৳</strong></span
-          ><span id="balance" class="font-semibold ml-1">0</span>
+          ><span id="balanceValue" class="font-semibold ml-1">0</span>
         </p>
       </div>
     </div>
@@ -59,7 +69,6 @@
     <table id="transactions" class="w-full border-collapse mt-4">
       <thead>
         <tr class="bg-gray-100">
-          <th class="border border-gray-300 px-3 py-2 text-left">Type</th>
           <th class="border border-gray-300 px-3 py-2 text-left">Amount</th>
           <th class="border border-gray-300 px-3 py-2 text-left">Category</th>
           <th class="border border-gray-300 px-3 py-2 text-left">
@@ -68,7 +77,8 @@
           <th class="border border-gray-300 px-3 py-2 text-left">Action</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody id="table"></tbody>
     </table>
+    <script src="./index.js"></script>
   </body>
 </html>
